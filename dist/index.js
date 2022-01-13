@@ -4,9 +4,9 @@
 /***/ 825:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
-const AWS = __nccwpck_require__(956);
-const core = __nccwpck_require__(25);
-const config = __nccwpck_require__(544);
+const AWS = __nccwpck_require__(942);
+const core = __nccwpck_require__(974);
+const config = __nccwpck_require__(16);
 
 // User data scripts are run as the root user
 function buildUserDataScript(githubRegistrationToken, label) {
@@ -107,11 +107,11 @@ module.exports = {
 
 /***/ }),
 
-/***/ 544:
+/***/ 16:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
-const core = __nccwpck_require__(25);
-const github = __nccwpck_require__(334);
+const core = __nccwpck_require__(974);
+const github = __nccwpck_require__(101);
 
 class Config {
   constructor() {
@@ -182,13 +182,13 @@ try {
 
 /***/ }),
 
-/***/ 596:
+/***/ 420:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
-const core = __nccwpck_require__(25);
-const github = __nccwpck_require__(334);
-const _ = __nccwpck_require__(249);
-const config = __nccwpck_require__(544);
+const core = __nccwpck_require__(974);
+const github = __nccwpck_require__(101);
+const _ = __nccwpck_require__(625);
+const config = __nccwpck_require__(16);
 
 // use the unique label to find the runner
 // as we don't have the runner's id, it's not possible to get it in any other way
@@ -279,7 +279,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 25:
+/***/ 974:
 /***/ ((module) => {
 
 module.exports = eval("require")("@actions/core");
@@ -287,7 +287,7 @@ module.exports = eval("require")("@actions/core");
 
 /***/ }),
 
-/***/ 334:
+/***/ 101:
 /***/ ((module) => {
 
 module.exports = eval("require")("@actions/github");
@@ -295,7 +295,7 @@ module.exports = eval("require")("@actions/github");
 
 /***/ }),
 
-/***/ 956:
+/***/ 942:
 /***/ ((module) => {
 
 module.exports = eval("require")("aws-sdk");
@@ -303,7 +303,7 @@ module.exports = eval("require")("aws-sdk");
 
 /***/ }),
 
-/***/ 249:
+/***/ 625:
 /***/ ((module) => {
 
 module.exports = eval("require")("lodash");
@@ -353,9 +353,9 @@ var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
 (() => {
 const aws = __nccwpck_require__(825);
-const gh = __nccwpck_require__(596);
-const config = __nccwpck_require__(544);
-const core = __nccwpck_require__(25);
+const gh = __nccwpck_require__(420);
+const config = __nccwpck_require__(16);
+const core = __nccwpck_require__(974);
 
 function setOutput(label, ec2InstanceId) {
   core.setOutput('label', label);
